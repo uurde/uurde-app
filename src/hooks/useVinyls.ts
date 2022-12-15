@@ -2,7 +2,7 @@ import { useIsFocused } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { getVinyl, listVinyls } from "../api/vinyl";
 import { VinylModel } from "../models/vinyl";
-import { getToken } from "../utils/token";
+import { getToken } from "../utils/api";
 
 export const getVinyls = () => {
     const [vinyls, setVinyls] = useState<VinylModel[]>([]);

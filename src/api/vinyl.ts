@@ -1,11 +1,8 @@
 import { VinylModel } from "../models/vinyl";
-
-const localUri = "http://localhost:47949/api";
-const piLocal = "192.168.1.30:81/api";
-const azureUri = "https://uurde-api.azurewebsites.net/api";
+import { getUrl } from "../utils/api";
 
 export const listVinyls = async (token: string): Promise<VinylModel[]> => {
-    var uri = azureUri + '/vinyls/list';
+    var uri = getUrl() + '/vinyls/list';
     const response = await fetch(
         uri, {
         method: "GET",
@@ -21,7 +18,7 @@ export const listVinyls = async (token: string): Promise<VinylModel[]> => {
 }
 
 export const getVinyl = async (id: string, token: string): Promise<VinylModel> => {
-    var uri = azureUri + "/vinyls/get?id=" + id;
+    var uri = getUrl() + "/vinyls?vinylId=" + id;
     const response = await fetch(
         uri, {
         method: "GET",
