@@ -1,8 +1,7 @@
-import { useAuth } from "../context/AppContext"
 import { VinylModel } from "../models/vinyl";
 
-const localUri = "http://localhost:47949/vinyls/list/api";
-const piLocal = "192.168.1.30:81/vinyls/list/api";
+const localUri = "http://localhost:47949/api";
+const piLocal = "192.168.1.30:81/api";
 const azureUri = "https://uurde-api.azurewebsites.net/api";
 
 export const listVinyls = async (token: string): Promise<VinylModel[]> => {

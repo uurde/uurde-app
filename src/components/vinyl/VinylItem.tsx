@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { VinylModel } from "../../models/vinyl";
 
